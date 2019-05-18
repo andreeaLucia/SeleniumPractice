@@ -58,22 +58,6 @@ public class Tests {
 	}
 	
 	@Test
-	public void testLinkProgramarii() {
-		try {
-			System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\selenium\\chromedriver.exe");
-			driver = new ChromeDriver();
-			driver.get("http://www.likecool.com");
-			WebElement buttonProgramari = driver.findElement(By.cssSelector("body > div > div.wrap.push > div > div > a"));
-			String expectedLink = "http://www.programari.bigfitness.ro";
-			buttonProgramari.click();
-			String url = driver.getCurrentUrl();
-			Assert.assertEquals(expectedLink, url);	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	@Test
 	public void testButtonMaiMulte() {
 		try {
 			System.setProperty("webdriver.chrome.driver", "C:\\Program Files\\selenium\\chromedriver.exe");
